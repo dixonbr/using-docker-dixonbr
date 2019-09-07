@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+<body class="container">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="books.html">Books</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center">
+<a href="book.jpg"><img src="book.jpg" alt="Reading" width="500" align="center"></a>
+<br>
+<a href="https://www.amazon.com/Princess-Frog-Single-Disc-Bruno-Campos/dp/B0034JKZ86">Photo Citation</a>
+</div>
+
+<div class="container text-center">
+<h1>
+  My Reading List
+</h1>
+</div>
+
+  <table id="bookTable" class="table table-striped table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Year Published</th>
+        <th>Page Count</th>
+        <th>MSRP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Becoming</th>
+          <td>Michelle Obama</td>
+          <td>Crown</td>
+          <td>2019</td>
+          <td>400</td>
+          <td>$16.25</td>
+      </tr>
+      <tr>
+        <th>The Subtle Art of Not Giving A F</th>
+          <td>Mark Manson</td>
+          <td>HarperOne</td>
+          <td>2016</td>
+          <td>224</td>
+          <td>$17.99</td>
+      </tr>
+      <tr>
+        <th>I Am Malala</th>
+          <td>Malala Yousafzai</td>
+          <td>Weidenfeld & Nicolson</td>
+          <td>2013</td>
+          <td>288</td>
+          <td >$14.85</td>
+      </tr>
+      <tr>
+        <th>Black Privilege</th>
+          <td>Charlamagne Tha God</td>
+          <td>Simon & Schuster</td>
+          <td>2017</td>
+          <td>252</td>
+          <td>$18.19</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="container text-center">
+  <h2>
+    Add to Reading List
+  </h2>
+</div>
+
+<form>
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control"placeholder="Enter title of book">
+  </div>
+  <div class="form-group">
+    <label>Author</label>
+    <input type="text" class="form-control"placeholder="Enter name of author">
+  </div>
+  <div class="form-group">
+    <label>Publisher</label>
+    <input type="text" class="form-control"placeholder="Enter name of publisher">
+  </div>
+  <div class="form-group">
+    <label>Year Published</label>
+    <input type="text" class="form-control"placeholder="Enter year of publication">
+  </div>
+  <div class="form-group">
+    <label>Page Count</label>
+    <input type="text" class="form-control"placeholder="Enter total number of pages">
+  </div>
+  <div class="form-group">
+    <label>MSRP</label>
+    <input type="text" class="form-control"placeholder="Enter price of book">
+  </div>
+  <div class="container text-center">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<br>
+<br>
+<script src="js/tablesort.min.js"></script>
+<script>
+  new Tablesort(document.getElementById('bookTable'));
+</script>
+</body>
+</html>
