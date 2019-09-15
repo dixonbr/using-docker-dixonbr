@@ -29,22 +29,25 @@
   </div>
 </nav>
 
-<div class="container text-center">
+<div id="randomUserApp" class="container text-center">
+<div v-for="user in users">
   <h1>
-    My Name is Princess Tiana!
+     {{user.name.first}} {{user.name.last}}
   </h1>
-  <a href="princesstiana.jpg"><img src="princesstiana.jpg" alt="Princess Tiana" width="250"></a>
+  <a :href="user.picture.large"><img :src="user.picture.large" alt="Profile Picture"></a>
   <br>
   <a href="https://www.awn.com/news/disney-modifies-princess-tiana-ralph-breaks-internet-amid-whitewashing-criticism">Photo Citation</a>
 
   <br>
   <br>
-  <p> Country of Origin: United States</p>
-  <p> Birthdate: August 11, 1997</p>
-  <p> Age: 22</p>
-  <p> Email: <a href="mailto:princesstiana@disney.com?subject=feedback"</a>princesstiana@disney.com</p>
-</div>
+  <p> Country of Origin: {{user.nat}}</p>
+  <p> Birthdate: {{user.dob.date}}</p>
+  <p> Age: {{user.dob.age}}</p>
+  <p> Email: <a :href="'mailto:'+ user.email">{{user.email}}</a></p>
 
+  <button v-on:click="fetchUsers()" class="btn btn-primary">Get New Profile</button>
+</div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/random.user.js"></script>
 

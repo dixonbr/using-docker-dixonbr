@@ -1,13 +1,13 @@
-var waitingApp = new Vue({
-  el: '#patientWaitingApp',
+var randomUser = new Vue({
+  el: '#randomUserApp',
   data: {
-    patients: []
+    users: []
   },
   methods: {
-    fetchPatients() {
+    fetchUsers() {
       fetch('https://randomuser.me/api/')
       .then(response => response.json())
-      .then(json => {waitingApp.patients = json});
+      .then(json => {randomUser.users = json.results;})
 
       // Means the same at this
       // fetch('https://randomuser.me/api/')
@@ -17,6 +17,6 @@ var waitingApp = new Vue({
     }
   },
   created() {
-    this.fetchPatients()
+    this.fetchUsers();
   }
 });
